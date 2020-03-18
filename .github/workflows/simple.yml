@@ -2,9 +2,9 @@ name: Shell Commands
 
 on:
   pull_request:
-    types: [closed]
     branches:
-      -master
+      - master
+    types: [closed]
 
 jobs:
   run-shell-command:

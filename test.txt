@@ -1,0 +1,11 @@
+foo
+
+bar
+
+FOO
+
+BAR
+
+hola
+
+haloo

@@ -19,6 +19,6 @@ jobs:
           ref: master
       - name: after checkout
         run: |
-          sed -i 's/foo/${{MY_NAME}}/g' test.txt
+          sed -i 's/foo/${{ secrets.MY_NAME }}/g' test.txt
           echo \\
           cat test.txt

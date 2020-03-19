@@ -28,3 +28,5 @@ jobs:
           BAR: haloo
         with:
           filename: test.txt
+      - name: after replace
+        run: cat test.txt

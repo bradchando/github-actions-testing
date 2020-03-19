@@ -19,8 +19,6 @@ jobs:
           ref: master
       - name: after checkout
         run: |
-          pwd
-          ls -a
-          cat test.txt
           sed 's/foo/bar/g' test.txt
+          echo \\
           cat test.txt

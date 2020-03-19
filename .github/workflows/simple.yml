@@ -21,12 +21,6 @@ jobs:
         run: |
           pwd
           ls -a
-      - name: file replace
-        uses: falnyr/replace-env-vars-action@master
-        env:
-          FOO: hola
-          BAR: haloo
-        with:
-          filename: test.txt
-      - name: after replace
-        run: cat test.txt
+          cat test.txt
+          sed 's/foo/bar/g' test.txt
+          cat test.txt

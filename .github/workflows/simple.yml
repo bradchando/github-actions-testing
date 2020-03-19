@@ -1,10 +1,9 @@
 name: Shell Commands
 
 on:
- pull_request:
+ push:
     branches:
       - master
-    types: [closed]
 
 jobs:
   run-shell-command:
@@ -22,3 +21,10 @@ jobs:
         run: |
           pwd
           ls -a
+      - name: file replace
+        uses: falnyr/replace-env-vars-action@master
+        env:
+          FOO: hola
+          BAR: haloo
+        with:
+          filename: test.txt

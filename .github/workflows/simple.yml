@@ -10,10 +10,13 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: multiline script
+      - name: before checkout
         run: |
           pwd
-          ls
-          node -v
-          npm -v
-          composer -v
+          ls -a
+      - name: checkout
+        uses: actions/checkout@v2.0.0
+      - name: after checkout
+        run: |
+          pwd
+          ls -a
